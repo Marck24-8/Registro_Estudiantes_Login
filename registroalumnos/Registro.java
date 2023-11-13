@@ -33,11 +33,7 @@ public class Registro extends javax.swing.JFrame {
     }
 
    public void refrescarTabla() {
-     /*  
-        while (modelo.getRowCount() > 0) {
-            modelo.removeRow(0);
-        }*/
-
+     
         for (RegistroAlumnos registroAlumnos : lista) {
             Object a[]=new Object[5];
             a[0]=nuevo.getNombre();
@@ -45,8 +41,10 @@ public class Registro extends javax.swing.JFrame {
             a[2]=nuevo.getNivel();
             a[3]=nuevo.getGrupo();
             a[4]=nuevo.getContacto();
-            modelo.addRow(a);
+        
         }
+        modelo.addRow(a);
+       
         tblRegistro.setModel(modelo);
      }
 
